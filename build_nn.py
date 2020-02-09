@@ -1,10 +1,9 @@
-Learn more or give us feedback
 """
 Construction initialization and forward propogation of the NN.
 Author:
     Sabareesh Mamidipaka
 Date:
-    11/19/2018
+    12/25/2018
 """
 
 
