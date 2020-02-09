@@ -1,3 +1,4 @@
+Code written using TensorFlow version 1.9
 # Neural_Forest
 
 ##Purpose
@@ -14,4 +15,9 @@ b) Model highly depnedent on the training set. (Addition or removing even one da
 
 And fortunately enough for us neural networks can also be highly overfitting and they can give rise to different models if we select different features to use for building each model. So, we can try to use neural networks to become the building block of a random forest algorithm. 
 
-Most of the times, there are always some features which are most important for building a model. In random forests, we select subset of features at every split which means that we get to use the most important feature at some point of the decision tree. But this is not a possiblity when we use neural networks to add features later. So, all the neural nets in the forest may not be good enough. So, we need to take that into account when combining the output of each neural net. We will combine them taking the accuracy of the models measure over the oob samples for each of the bagged neural network.
+Most of the times, there are always some features which are most important for building a model. In random forests, we select subset of features at every split which means that we get to use the most important feature at some point of the decision tree. But this is not a possiblity when we use neural networks(we cannot add features later). So, all the neural nets in the forest may not be good enough. So, we need to take that into account when combining the output of each neural net. We will combine them taking the accuracy of the models measure over the oob samples for each of the bagged neural network.
+
+The file 'build_nn.py' contains the code for initializing a neural network.
+the file 'mis_func.py' contains other miscelleneous functions to perform bagging, scaling and get all possible features list.
+The file 'neural_forest.py' itself contains the model initialization, fit and the prediction.
+An example application of the model has been provided along with the data. 
